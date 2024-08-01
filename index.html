@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Переадресация</title>
-    <meta http-equiv="refresh" content="0; url=https://discord.gg/YqksmjbjqQ">
-    <style>
-        body {
-            background-color: #000; /* Черный фон */
-            color: #fff; /* Белый текст */
-            font-family: Arial, sans-serif; /* Шрифт */
-            text-align: center; /* Выравнивание текста по центру */
-            padding-top: 20px; /* Отступ сверху */
-        }
-        a {
-            color: #4A90E2; /* Цвет ссылки */
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanillium</title>
+    <link rel="shortcut icon" href="https://i.imgur.com/UPadJcy.png" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Если вы не были автоматически перенаправлены, пожалуйста, перейдите по <a href="https://discord.gg/YqksmjbjqQ">этой ссылке</a>.</p>
+    <div class="container">
+        <div class="text-box">
+            <div id="copyNotification" class="copy-notification">Скопировано!</div>
+            <img src="https://i.imgur.com/UPadJcy.png" class="img" alt="">
+            <h1>Vanillium</h1>
+            <p>Cервер созданный сообществом, уставшим от временных проектов, Vanillium предлагает уют и долговечность.</p>
+            <p class="p2">.</p>
+            <span class="custom-btn" id="copyButton" onclick="copyToClipboard('mc.vanillium.xyz')">Скопировать IP</span>
+            <p class="p2">hetav98</p>
+            <a href="https://discord.gg/YqksmjbjqQ" class="social bi-discord"></a>
+            <p class="p2">Nernny</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
