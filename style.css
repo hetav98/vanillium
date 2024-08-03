@@ -15,6 +15,7 @@ body, html {
     align-items: center;
 }
 
+
 .faq-container {
     background-image: url('https://i.imgur.com/Y1ZgsFZ.png');
     background-size: cover;
@@ -37,7 +38,7 @@ body, html {
 }
 
 .text-box {
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон для контраста */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 20px;
     border-radius: 8px;
@@ -78,6 +79,17 @@ body, html {
     margin: 20px;
 }
 
+.arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 95%;
+    margin: auto;
+    padding-bottom: 40px;
+    text-align: center;
+    animation: arrow 0.5s infinite alternate;
+}
+
 .social {
     background: transparent;
     border-radius: 50px;
@@ -90,48 +102,11 @@ body, html {
     margin: 100px;
     opacity: 1;
     cursor: pointer;
+    
 }
 
 .social:hover {
     filter: drop-shadow(0px 0px 20px #8c9eff);
-}
-
-.copy-notification {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed;
-    bottom: 20px;
-    left: 50%; /* Центрирование по горизонтали */
-    transform: translateX(-50%); /* Смещение влево на половину ширины */
-    background-color: #71cbffb0;
-    color: white;
-    padding: 10px 30px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@keyframes fadein {
-    from { bottom: 0; opacity: 0; }
-    to { bottom: 20px; opacity: 1; }
-}
-
-@keyframes fadeout {
-    from { bottom: 20px; opacity: 1; }
-    to { bottom: 0; opacity: 0; }
-}
-
-.p2 {
-    color: transparent;
-}
-
-h1 {
-    margin: 0;
-    font-size: 3em;
-}
-
-p {
-    font-size: 1.5em;
 }
 
 .img {
@@ -146,16 +121,24 @@ p {
     background-image: url(https://img.icons8.com/?size=60&id=30998&format=png&color=FFFFFF);
 }
 
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #ddd;
+.copy-notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #71cbffb0;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
 .faq-item {
     margin-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #424242;
     border-radius: 8px;
 }
 
@@ -174,7 +157,8 @@ h2 {
 }
 
 .faq-question:hover {
-    background-color: #ececec;
+    background-color: #ffffff;
+    /* #71cbff */
     color: #1d1d1d;
 }
 
@@ -187,5 +171,47 @@ h2 {
 .faq-answer p {
     margin: 10px 0;
     font-size: 1em;
+    color: #ddd;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 20px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 20px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+@keyframes arrow {
+    from { transform: translateY(0px)}
+    to { transform: translateY(5px)}
+}
+
+@keyframes open {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.p2 {
+    color: transparent;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
     color: #ddd;
 }
